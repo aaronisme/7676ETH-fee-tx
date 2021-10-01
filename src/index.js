@@ -10,7 +10,7 @@ const txData = {
   "maxFeePerGas": 3173566518.0496095,
   "nonce": "0x5c2",
   "to": "0xed9d63a96c27f87b07115b56b2e3572827f21646",
-  "value": "0",
+  "value": "0x01",
   "chainId": "0x01",
   "accessList": [],
   "type": "0x02"
@@ -18,4 +18,4 @@ const txData = {
 
 const tx = FeeMarketEIP1559Transaction.fromTxData(txData, { common })
 
-console.log(tx.maxFeePerGas.toString('hex'))
+console.log(`maxPriorityFeePerGas: hex:${tx.maxFeePerGas.toString(16)}`)
